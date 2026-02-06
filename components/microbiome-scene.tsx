@@ -49,7 +49,7 @@ function Particle({
   color: string;
   speed: number;
 }) {
-  const ref = useRef<THREE.Mesh>(null);
+  const ref = useRef<any>(null);
   const offset = useMemo(() => Math.random() * Math.PI * 2, []);
 
   useFrame((state) => {
@@ -93,7 +93,7 @@ function BacteriaCluster({
   count?: number;
   color: string;
 }) {
-  const groupRef = useRef<THREE.Group>(null);
+  const groupRef = useRef<any>(null);
 
   const bacteria = useMemo(() => {
     return Array.from({ length: count }, (_, i) => ({
@@ -345,7 +345,7 @@ function CellMembrane({
   baseRadius?: number;
   color?: string;
 }) {
-  const ref = useRef<THREE.Mesh>(null);
+  const ref = useRef<any>(null);
 
   useFrame((state) => {
     if (!ref.current) return;
@@ -381,7 +381,7 @@ function EnergyTrail({
   position: [number, number, number];
   color?: string;
 }) {
-  const ref = useRef<THREE.Mesh>(null);
+  const ref = useRef<any>(null);
 
   useFrame((state) => {
     if (!ref.current) return;
