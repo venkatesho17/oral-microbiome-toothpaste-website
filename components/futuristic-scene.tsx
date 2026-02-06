@@ -65,6 +65,11 @@ export default function FuturisticScene() {
         <pointLight position={[-10, -5, -5]} intensity={0.5} color="#38bdf8" />
         <FloatingTorus />
         <ParticlesField />
+        {/* Debug sphere: large, bright, rotating in front to confirm rendering */}
+        <mesh position={[0, 0, -2]} scale={2.8}>
+          <sphereGeometry args={[1, 32, 32]} />
+          <meshStandardMaterial color="#ff6b6b" emissive="#ff6b6b" emissiveIntensity={1.2} roughness={0.05} metalness={0.9} />
+        </mesh>
         <fog attach="fog" args={["#0f172a", 6, 28]} />
       </Canvas>
       <div
