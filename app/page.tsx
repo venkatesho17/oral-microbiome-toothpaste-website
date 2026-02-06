@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <WebGLIndicator />
       <MicrobiomeSceneWrapper />
-      <div className="relative z-20 text-white">
+      <div className="relative z-20 text-neutral-900">
         <Navbar />
         <HeroSection />
         <main>
