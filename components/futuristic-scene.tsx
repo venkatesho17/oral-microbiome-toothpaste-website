@@ -72,10 +72,7 @@ export default function FuturisticScene() {
         </mesh>
         <fog attach="fog" args={["#0f172a", 6, 28]} />
       </Canvas>
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "linear-gradient(180deg, rgba(2,6,23,0.12), rgba(2,6,23,0.04))" }}
-      />
+      {/* Overlay removed to let the 3D canvas show through clearly */}
     </div>
   );
 }
